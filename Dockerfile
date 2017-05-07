@@ -6,7 +6,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 \
     echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse" |  tee /etc/apt/sources.list.d/mongodb-org-3.4.list && \
     apt-get -y update && \
     apt-get install -y mongodb-org && \
-    apt-get install tk-dev
+    apt-get install -y tk-dev
 
 # tkinter fix
 RUN pyenv install 3.4.5 -f && \
